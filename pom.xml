@@ -72,4 +72,16 @@
       </plugins>
     </pluginManagement>
   </build>
+  <profile>
+    <id>sonar</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    <properties>
+      <!-- Optional URL to server. Default value is http://localhost:9000 -->
+      <sonar.host.url>
+        http://localhost:9000
+      </sonar.host.url>
+    </properties>
+  </profile>  
 </project>
