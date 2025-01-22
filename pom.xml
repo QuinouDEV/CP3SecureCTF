@@ -8,5 +8,22 @@
     <properties>
         <sonar.projectKey>TEST</sonar.projectKey>
         <sonar.host.url>http://172.17.0.4:9000/</sonar.host.url>
+        <!-- Définir Java 17 comme version source et cible -->
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>17</source> <!-- Utiliser Java 17 -->
+                    <target>17</target> <!-- Utiliser Java 17 -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
