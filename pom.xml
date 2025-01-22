@@ -79,8 +79,7 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <sonar.host.url>http://sonarqube:9000</sonar.host.url>
-        <sonar.login>votre_token</sonar.login>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
       </properties>
     </profile>
   </profiles>
