@@ -1,13 +1,23 @@
-pipeline {
-    agent none
-    stages {
-        stages("Build & Analyse avec SonarQube") { 
-            agent any
+pipeline { 
+    agent any 
+ 
+    stages { 
+        stage("build") { 
             steps { 
-              script {
-                sh 'mnv clean package sonar:sonar'
-              }
-            }
-        }
-    }
-}
+                echo 'Building the application' 
+            } 
+        } 
+ 
+        stage("test") { 
+            steps { 
+                echo 'Testing the application' 
+            } 
+        } 
+ 
+        stage("deploy") { 
+            steps { 
+                echo 'Deploying the application' 
+            } 
+        } 
+    } 
+} 
