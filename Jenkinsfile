@@ -9,5 +9,17 @@ pipeline {
                 }
             }
         }
+        stage("Deploy & OWASP Dependency-Check") {
+            agent any
+            steps {
+                dependencyCheck additionalArguments: '''
+                    -o './'
+                    -s './'
+                    -f 'ALL'
+                    --prettyPrint''', 
+                    odcInstallation: 'owasp-dependency'
+                dependencyCheckPublisher pattern: 'dependency-check-report.xml'
+            }
+        }
     }
 }
