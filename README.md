@@ -27,21 +27,6 @@ sudo docker-compose up -d
 
 ---
 
-## Flags
-
-The platform currently features three flags to capture:
-
-### Flag1
-Achieve the top position on the leaderboard.
-
-### Flag2
-Obtain administrator privileges.
-
-### Flag3
-Steal the admin's password (requirements: Flag2).
-
----
-
 ## Technologies Used
 
 - **Frontend**: [React](https://react.dev/)
